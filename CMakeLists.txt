@@ -10,7 +10,7 @@ set(POINT_TYPE XYZI)
 #=======================================
 # Compile setup (ORIGINAL, CATKIN, COLCON)
 #=======================================
-set(COMPILE_METHOD CATKIN)
+set(COMPILE_METHOD COLCON)
 
 option(ENABLE_TRANSFORM "Enable transform functions" OFF)
 if(${ENABLE_TRANSFORM})
@@ -78,7 +78,11 @@ message(=============================================================)
 #========================
 
 #ROS#
+if(${COMPILE_METHOD} STREQUAL "CATKIN")
+
 find_package(roscpp 1.12 QUIET)
+
+endif(${COMPILE_METHOD} STREQUAL "CATKIN")
 
 if(roscpp_FOUND)
 
