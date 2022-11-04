@@ -209,5 +209,12 @@ Below are some quick guides to use rslidar_sdk.
 
 [Record rosbag & Replay it](doc/howto/how_to_record_replay_packet_rosbag.md)
 
-## 
+## 8 IP configuration 
 
+In your machine set the IP to: `192.168.1.102`
+
+Test the connection with the LiDAR with this command: 
+
+```sh
+ping 192.168.1.200
+```
